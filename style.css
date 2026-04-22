@@ -38,7 +38,7 @@ body {
   min-height: 100%;
 }
 
-/* Dark overlay + noise texture */
+/*DARK OVERLAY + NOISE TEXTURE*/
 body::before {
   content: '';
   position: fixed;
@@ -57,7 +57,7 @@ body::before {
   max-width: 560px;
 }
 
-/* ── Header ── */
+/*HEADER*/
 .header {
   margin-bottom: 48px;
 }
@@ -79,7 +79,7 @@ body::before {
   text-transform: uppercase;
 }
 
-/* ── Input ── */
+/*INPUIT*/
 .input-row {
   display: flex;
   gap: 8px;
@@ -130,7 +130,7 @@ body::before {
 .btn-add:hover  { background: #d8ff3d; }
 .btn-add:active { transform: scale(0.96); }
 
-/* ── Error toast ── */
+/*ERROR TOAST*/
 .toast {
   font-size: 11px;
   color: var(--danger);
@@ -149,7 +149,7 @@ body::before {
   transform: translateY(0);
 }
 
-/* ── Stats bar ── */
+/*STARTS BAR*/
 .stats {
   display: flex;
   gap: 24px;
@@ -169,7 +169,7 @@ body::before {
   font-weight: 500;
 }
 
-/* ── List ── */
+/*LIST*/
 .list {
   list-style: none;
   display: flex;
@@ -206,7 +206,7 @@ body::before {
   color: var(--done-text);
 }
 
-/* Checkbox */
+/*CHECKBOX*/
 .check {
   width: 18px;
   height: 18px;
@@ -234,7 +234,7 @@ body::before {
   display: block;
 }
 
-/* Text */
+/*TEXT*/
 .item-text {
   flex: 1;
   font-size: 13px;
@@ -245,7 +245,7 @@ body::before {
   user-select: none;
 }
 
-/* Delete btn */
+/*DELETE BUTTON*/
 .btn-delete {
   background: none;
   border: none;
@@ -269,7 +269,7 @@ body::before {
   color: var(--danger);
 }
 
-/* Empty state */
+/*EMPTYSTATE*/
 .empty {
   text-align: center;
   padding: 48px 0;
@@ -290,7 +290,7 @@ body::before {
   margin-bottom: 12px;
 }
 
-/* ── Animations ── */
+/*ANIMATION*/
 @keyframes slide-in {
   from { opacity: 0; transform: translateY(-8px); }
   to   { opacity: 1; transform: translateY(0); }
@@ -313,7 +313,7 @@ body::before {
   animation: pop-out 0.18s ease forwards;
 }
 
-/* ── Footer ── */
+/*FOOTER*/
 .footer {
   position: fixed;
   bottom: 0;
