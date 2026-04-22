@@ -15,7 +15,7 @@ function saveTasks(tasks) {
 
 let tasks = loadTasks(); // [{ id, text, done }]
 
-// ── DOM refs ───────────────────────────────────────────────────────────────
+//DOM REF
 const input     = document.getElementById('task-input');
 const addBtn    = document.getElementById('add-btn');
 const list      = document.getElementById('list');
@@ -26,7 +26,7 @@ const statTotal = document.getElementById('stat-total');
 const statDone  = document.getElementById('stat-done');
 const statLeft  = document.getElementById('stat-left');
 
-// ── Helpers ────────────────────────────────────────────────────────────────
+//HELPERS
 function genId() {
   return Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
 }
@@ -44,7 +44,7 @@ function showToast(msg) {
   toastTimer = setTimeout(() => toast.classList.remove('visible'), 2400);
 }
 
-// ── Render ─────────────────────────────────────────────────────────────────
+//RENDER
 function render() {
   const total = tasks.length;
   const done  = tasks.filter(t => t.done).length;
@@ -68,7 +68,7 @@ function render() {
     li.className = 'item' + (task.done ? ' done' : '');
     li.dataset.id = task.id;
 
-    // Checkbox
+    //CHECKBOX
     const check = document.createElement('span');
     check.className = 'check';
     check.setAttribute('aria-hidden', 'true');
@@ -88,12 +88,12 @@ function render() {
     checkIcon.appendChild(path);
     check.appendChild(checkIcon);
 
-    // Text
+    //TEXT
     const span = document.createElement('span');
     span.className = 'item-text';
     span.textContent = task.text;
 
-    // Delete button
+    //DELETE BTN
     const del = document.createElement('button');
     del.className = 'btn-delete';
     del.title = 'Delete task';
@@ -122,7 +122,7 @@ function render() {
   });
 }
 
-// ── Actions ────────────────────────────────────────────────────────────────
+//ACTIONS
 function addTask() {
   const text = input.value.trim();
 
@@ -170,13 +170,13 @@ function triggerShake() {
   input.addEventListener('animationend', () => input.classList.remove('shake'), { once: true });
 }
 
-// ── Event listeners ────────────────────────────────────────────────────────
+//EVENT LIST
 addBtn.addEventListener('click', addTask);
 
 input.addEventListener('keydown', (e) => {
   if (e.key === 'Enter') addTask();
 });
 
-// ── Init ───────────────────────────────────────────────────────────────────
+//INIT
 render();
 input.focus();
