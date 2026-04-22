@@ -1,4 +1,4 @@
-// ── State ──────────────────────────────────────────────────────────────────
+//STATE
 const STORAGE_KEY = 'doit_tasks_v1';
 
 function loadTasks() {
@@ -13,7 +13,7 @@ function saveTasks(tasks) {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(tasks));
 }
 
-let tasks = loadTasks(); // [{ id, text, done }]
+let tasks = loadTasks(); 
 
 //DOM REF
 const input     = document.getElementById('task-input');
